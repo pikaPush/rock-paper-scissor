@@ -41,6 +41,8 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+console.log(`Your pick: ${humanSelection}`);
+console.log(`Computer's pick: ${computerSelection}`);
 console.log(playRound(humanSelection, computerSelection));
 console.log(`Your score: ${humanScore}`);
 console.log(`Computer score: ${computerScore}`);
