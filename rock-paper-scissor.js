@@ -21,4 +21,14 @@ console.log(getHumanChoice());
 const humanScore = 0;
 const computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {}
+function playRound(humanChoice, computerChoice) {
+  humanChoice = humanChoice.toLowerCase();
+
+  if (humanChoice === "rock") {
+    return "Rock";
+  } else if (humanChoice === "paper") {
+    return "Paper";
+  } else {
+    return "Scissor";
+  }
+}
