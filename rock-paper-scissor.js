@@ -23,6 +23,7 @@ const computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   humanChoice = humanChoice.toLowerCase();
+  computerChoice = Math.floor(Math.random() * 3);
 
   if (humanChoice === "rock") {
     return "Rock";
