@@ -2,11 +2,11 @@ function getComputerChoice() {
   let randomChoice = Math.floor(Math.random() * 3) + 1;
 
   if (randomChoice === 1) {
-    return "Rock";
+    return "rock";
   } else if (randomChoice === 2) {
-    return "Paper";
+    return "paper";
   } else {
-    return "Scissor";
+    return "scissor";
   }
 }
 
@@ -22,4 +22,6 @@ console.log(getHumanChoice());
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {}
+function playRound(humanChoice, computerChoice) {
+  humanChoice.toLowerCase();
+}
