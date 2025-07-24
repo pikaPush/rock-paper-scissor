@@ -46,3 +46,5 @@ console.log(`Computer's pick: ${computerSelection}`);
 console.log(playRound(humanSelection, computerSelection));
 console.log(`Your score: ${humanScore}`);
 console.log(`Computer score: ${computerScore}`);
+
+function playGame() {}
