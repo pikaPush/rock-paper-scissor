@@ -32,3 +32,5 @@ function playRound(humanChoice, computerChoice) {
     return "Scissor";
   }
 }
+
+console.log(`You lose ${computerChoice} beats ${humanChoice}`);
