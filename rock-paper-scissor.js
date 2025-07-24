@@ -23,6 +23,8 @@ function playGame() {
     humanChoice = humanChoice.toLowerCase();
 
     if (humanChoice === computerChoice) {
+      computerScore++;
+      humanScore++;
       return `It's a tie. Player: ${humanChoice} vs Computer: ${computerChoice}`;
     } else if (humanChoice === "rock" && computerChoice === "paper") {
       computerScore++;
@@ -47,6 +49,8 @@ function playGame() {
   console.log(playRound(humanSelection, computerSelection));
   console.log(`Your score: ${humanScore}`);
   console.log(`Computer score: ${computerScore}`);
+
+  playRound();
 }
 
 playGame();
