@@ -6,6 +6,15 @@ let computerScore = 0;
 let currentRound = 1;
 let maxRound = 5;
 
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (currentRound > maxRound) return;
+
+    const humanChoice = button.id;
+    const computerChoice = getComputerChoice();
+  });
+});
+
 function getComputerChoice() {
   const choices = ["Rock", "Paper", "Scissor"];
   return choices[Math.floor(Math.random() * choices.length)];
