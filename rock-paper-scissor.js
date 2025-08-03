@@ -62,7 +62,9 @@ function gameWinner() {
     winner.textContent =
       humanScore > computerScore
         ? "Congratulations! You win this game! 🏆"
-        : "You lose! 😞 Better luck next time!";
+        : humanScore < computerScore
+        ? "You lose! 😞 better luck next time!"
+        : "It's a tie";
     return result.append(winner);
   }
 }
