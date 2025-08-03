@@ -21,10 +21,22 @@ function playRound(humanSelection, computerSelection) {
 
   let humanScore = 0;
   let computerScore = 0;
+  let resultDisplay = document.createElement("div");
 
   if (humanSelection === computerSelection) {
-    let resultDisplay = document.createElement("div");
     resultDisplay.textContent = "It's a tie";
+    result.append(resultDisplay);
+    humanScore++;
+  } else if (
+    (humanSelection === "Rock" && computerSelection === "Scissor") ||
+    (humanSelection === "Paper" && computerSelection === "Rock") ||
+    (humanSelection === "Scissor" && computerSelection === "Paper")
+  ) {
+    resultDisplay.textContent = `You won! ${humanSelection} beats ${computerSelection}`;
+    result.append(resultDisplay);
+    humanScore++;
+  } else {
+    resultDisplay.textContent = `You lose! ${computerSelection} beats ${humanSelection}`;
     result.append(resultDisplay);
   }
 }
