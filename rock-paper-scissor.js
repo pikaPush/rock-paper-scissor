@@ -10,7 +10,7 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     if (currentRound > maxRound) return;
 
-    const humanChoice = button.id;
+    const humanChoice = button.dataset.choice;
     const computerChoice = getComputerChoice();
     const outcome = playRound(humanChoice, computerChoice);
     displayResult(outcome);
@@ -20,7 +20,7 @@ buttons.forEach((button) => {
 });
 
 function getComputerChoice() {
-  const choices = ["Rock", "Paper", "Scissor"];
+  const choices = ["rock", "paper", "scissor"];
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
@@ -30,9 +30,9 @@ function playRound(humanSelection, computerSelection) {
     computerScore++;
     return "It's a tie";
   } else if (
-    (humanSelection === "Rock" && computerSelection === "Scissor") ||
-    (humanSelection === "Paper" && computerSelection === "Rock") ||
-    (humanSelection === "Scissor" && computerSelection === "Paper")
+    (humanSelection === "rock" && computerSelection === "scissor") ||
+    (humanSelection === "paper" && computerSelection === "rock") ||
+    (humanSelection === "scissor" && computerSelection === "paper")
   ) {
     humanScore++;
     return `You win! ${humanSelection} beats ${computerSelection}`;
