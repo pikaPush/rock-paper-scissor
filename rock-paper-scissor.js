@@ -12,6 +12,9 @@ buttons.forEach((button) => {
 
     const humanChoice = button.id;
     const computerChoice = getComputerChoice();
+    const outcome = playRound(humanChoice, computerChoice);
+    displayResult(outcome);
+    currentRound++;
   });
 });
 
@@ -36,4 +39,18 @@ function playRound(humanSelection, computerSelection) {
     computerScore++;
     return `You lose! ${computerSelection} beats ${humanSelection}`;
   }
+}
+
+function displayResult(messageResult) {
+  let rounds = document.createElement("div");
+  rounds.textContent = `Round ${currentRound}`;
+  result.append(rounds);
+
+  let messageResult = document.createElement("div");
+  messageResult.textContent = message;
+  result.append(messageResult);
+
+  let scores = document.createElement("div");
+  scores.textContent = `You: ${humanScore} | Computer: ${computerScore}`;
+  result.append(scores);
 }
