@@ -15,6 +15,7 @@ buttons.forEach((button) => {
     const outcome = playRound(humanChoice, computerChoice);
     displayResult(outcome);
     currentRound++;
+    gameWinner();
   });
 });
 
@@ -41,7 +42,7 @@ function playRound(humanSelection, computerSelection) {
   }
 }
 
-function displayResult(messageResult) {
+function displayResult(message) {
   let rounds = document.createElement("div");
   rounds.textContent = `Round ${currentRound}`;
   result.append(rounds);
@@ -53,4 +54,15 @@ function displayResult(messageResult) {
   let scores = document.createElement("div");
   scores.textContent = `You: ${humanScore} | Computer: ${computerScore}`;
   result.append(scores);
+}
+
+function gameWinner() {
+  let winner = document.createElement("div");
+  if (humanScore > computerScore) {
+    winner.textContent = "Congratulations! You win the game! 🏆";
+    return result.append(winner);
+  } else {
+    winner.textContent = "You Lose! Better luck next time. 😞";
+    return result.append(winner);
+  }
 }
