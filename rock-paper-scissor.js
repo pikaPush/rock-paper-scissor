@@ -56,13 +56,13 @@ function displayResult(message) {
   result.append(scores);
 }
 
+let winner = document.createElement("div");
 function gameWinner() {
-  let winner = document.createElement("div");
-  if (humanScore > computerScore) {
-    winner.textContent = "Congratulations! You win the game! 🏆";
-    return result.append(winner);
-  } else {
-    winner.textContent = "You Lose! Better luck next time. 😞";
+  if (currentRound > maxRound) {
+    winner.textContent =
+      humanScore > computerScore
+        ? "Congratulations! You win this game! 🏆"
+        : "You lose! 😞 Better luck next time!";
     return result.append(winner);
   }
 }
