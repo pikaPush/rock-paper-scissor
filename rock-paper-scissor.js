@@ -38,5 +38,10 @@ function playRound(humanSelection, computerSelection) {
   } else {
     resultDisplay.textContent = `You lose! ${computerSelection} beats ${humanSelection}`;
     result.append(resultDisplay);
+    computerScore++;
   }
+
+  let scores = document.createElement("div");
+  scores.textContent = `You: ${humanScore} | Computer: ${computerScore}`;
+  result.append(scores);
 }
