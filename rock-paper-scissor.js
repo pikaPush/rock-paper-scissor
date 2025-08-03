@@ -64,7 +64,7 @@ function gameWinner() {
         ? "Congratulations! You win this game! 🏆"
         : humanScore < computerScore
         ? "You lose! 😞 better luck next time!"
-        : "It's a tie";
+        : "It's a tie!";
     return result.append(winner);
   }
 }
