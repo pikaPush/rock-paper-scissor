@@ -19,6 +19,9 @@ function playRound(humanSelection, computerSelection) {
   computerPick.textContent = `Computer: ${computerSelection}`;
   result.append(computerPick);
 
+  let humanScore = 0;
+  let computerScore = 0;
+
   if (humanSelection === computerSelection) {
     let resultDisplay = document.createElement("div");
     resultDisplay.textContent = "It's a tie";
