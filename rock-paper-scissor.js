@@ -1,2 +1,5 @@
 const result = document.getElementById("result");
-const choices = ["Rock", "Paper", "Scissor"];
+
+function playRound(humanSelection, computerSelection) {
+  const choices = ["Rock", "Paper", "Scissor"];
+}
